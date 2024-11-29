@@ -1,2 +1,66 @@
-The Django SMS application leverages Twilio's API to send SMS messages. The application has endpoints or views where users can trigger SMS sending, typically through APIs. 
-Twilio is a cloud communication platform that provides programmable messaging capabilities. With Twilio, you can send and receive SMS and perform messaging tasks.
+
+# SMS Messaging Application
+
+This Django application provides functionality to send SMS messages using a third-party SMS gateway. It is designed to be user-friendly and easy to integrate into existing projects.
+
+## Features
+- Send SMS messages to specified phone numbers.
+- Configurable settings for SMS gateway integration.
+- Basic form interface for testing SMS functionality.
+
+## Requirements
+- Python 3.x
+- Django 4.x or higher
+- A third-party SMS gateway account (e.g., Twilio, Nexmo, or other providers).
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+   ```
+
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up the database:
+   ```bash
+   python manage.py migrate
+   ```
+
+4. Configure the SMS gateway credentials:
+   - Open the `settings.py` file and add the necessary SMS gateway credentials:
+     ```python
+     SMS_GATEWAY_API_KEY = 'your_api_key_here'
+     SMS_GATEWAY_API_SECRET = 'your_api_secret_here'
+     SMS_GATEWAY_SENDER_ID = 'your_sender_id_here'
+     ```
+
+5. Start the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+## Usage
+
+1. Access the application in your web browser at `http://127.0.0.1:8000/`.
+
+2. Use the SMS form to input the recipient's phone number and the message you want to send.
+
+3. Click "Send" to deliver the SMS.
+
+## File Structure
+- `sms/`: Contains the core SMS application logic.
+  - `views.py`: Defines the views for sending SMS.
+  - `forms.py`: Manages the input form for SMS details.
+  - `models.py`: Stores SMS-related data (if needed).
+- `templates/sms/`: Contains HTML templates for the SMS form interface.
+
+## Contributing
+Feel free to submit issues or contribute via pull requests. Please ensure your code follows Django's coding standards.
+
+## License
+This project is licensed under the MIT License.
