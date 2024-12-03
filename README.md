@@ -53,7 +53,7 @@ This Django application offers a simple yet powerful solution for sending SMS me
 
 1. Access the application in your web browser at `http://127.0.0.1:8000/`.
 
-<img src="assets/462568131_2039142093181882_1441174839537607123_n.png" alt="browser">
+<img src="assets/462640127_567244419434887_1382034654469420705_n.png" alt="browser">
 
 2. Use the SMS form to input the recipient's name and the score to validate.
 <img src="assets/467480292_1281467486384722_1752781347104854345_n.png" alt="score">
