@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Send SMS</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'icon.ico' %}" type="image/x-icon">
+    <title>SMS</title>
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -12,9 +14,9 @@
         padding: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center the content vertically */
-        align-items: center; /* Center the content horizontally */
-        min-height: 100vh;
+        justify-content: flex-start; /* Align items to the top */
+        align-items: center;
+        min-height: 100vh; /* Ensure the body takes full height */
       }
 
       .container {
@@ -25,7 +27,7 @@
         width: 100%;
         max-width: 420px;
         box-sizing: border-box;
-        margin-bottom: 20px;
+        margin-top: 40px; /* Added distance between navbar and form */
       }
 
       h1 {
@@ -120,8 +122,9 @@
         padding: 20px;
         width: 100%;
         box-sizing: border-box;
-        position: absolute;
+        position: relative;
         bottom: 0;
+        margin-top: auto; /* Pushes the footer to the bottom */
       }
 
       .footer p {
@@ -138,9 +141,82 @@
       .footer a:hover {
         color: #45a049;
       }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        position: sticky; /* Keeps the navbar at the top when scrolling */
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #4caf50;
+      }
+
+      .navbar .logo img {
+        height: 32px;
+        width: 32px;
+      }
+
+      .navbar-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 16px;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+      }
+
+      .navbar-links a:hover {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .navbar-links {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+
+      .navbar .logo img {
+      height: 40px; /* Increase size */
+      width: 40px;  /* Increase size */
+      }
+
     </style>
   </head>
   <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">
+        {% load static %}
+        <img src="{% static 'icon.ico' %}" alt="Logo" />
+      </div>
+      <div class="navbar-links">
+        <a href="{% url 'admin:index' %}">Admin Dashboard</a>
+      </div>
+    </nav>
+
+    <!-- Main Content Section -->
     <div class="container">
       <h1>Score Validator</h1>
 
@@ -159,9 +235,10 @@
       </form>
     </div>
 
+    <!-- Footer Section -->
     <footer class="footer">
       <p>
-        &copy; 2023 Score Validator. All rights reserved. |
+        &copy; 2024 Score Validator. All rights reserved. |
         <span class="green-text">Group 2</span> |
         <span class="green-text">SMS_Activity</span>
       </p>
