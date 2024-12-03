@@ -9,8 +9,8 @@ class Message(models.Model):
         return self.name
     
     def send_sms(self):
-        account_sid = 'AC4e346e0ca8490da69d91efa73a856ddd'
-        auth_token = 'b8b9d4dbd06a6131ebcc1d9f441deb75'
+        account_sid = '<account-sid>'
+        auth_token = '<auth-token>'
         client = Client(account_sid, auth_token)
 
         if self.score >= 70:
@@ -20,8 +20,8 @@ class Message(models.Model):
 
         message = client.messages.create(
             body=message_body,
-            from_="+19787562664", 
-            to="+639382326740",    
+            from_="<verified-sender-phone-number>", 
+            to="<verified-receiver-phone-number>",    
         )
 
         print(f"Message sent with SID: {message.sid}")
