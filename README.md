@@ -1,17 +1,17 @@
 
-# ![SMS Icon](assets/462568131_2039142093181882_1441174839537607123_n.png) SMS Messaging Application
+# <img src="assets/462568131_2039142093181882_1441174839537607123_n.png" alt="SMS Icon" width="30" height="30"> SMS Messaging Application
 
 This Django application offers a simple yet powerful solution for sending SMS messages through integration with a third-party SMS gateway service. It is designed to be user-friendly, flexible, and easy to integrate into any existing Django project or web application. With this application, developers can quickly add SMS functionality to their projects, allowing for a seamless user experience. 🚀
 
-✨ Features
-📤 Send SMS messages to specified phone numbers.
-⚙️ Configurable settings for SMS gateway integration.
-🧪 Basic form interface for testing SMS functionality.
+##✨ Features
+-📤 Send SMS messages to specified phone numbers.
+-⚙️ Configurable settings for SMS gateway integration.
+-🧪 Basic form interface for testing SMS functionality.
 
-📋 Requirements
-🐍Python 3
-🌐Django 5 or higher
-📡 A third-party SMS gateway account (e.g., Twilio, or other providers).
+##📋 Requirements
+-🐍Python 3
+-🌐Django 5 or higher
+-📡 A third-party SMS gateway account (e.g., Twilio, or other providers).
 
 ## Installation
 
