@@ -53,7 +53,7 @@ This Django application provides functionality to send SMS messages using a thir
 
 1. Access the application in your web browser at `http://127.0.0.1:8000/`.
 
-2. Use the SMS form to input the recipient's name and the Score to validate.
+2. Use the SMS form to input the recipient's name and the score to validate.
 
 3. Click "Send" to deliver the SMS.
 
