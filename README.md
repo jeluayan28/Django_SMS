@@ -64,7 +64,7 @@ This Django application offers a simple yet powerful solution for sending SMS me
 Sample Output:
 
 
-<img src="assets/462554405_1754875351968851_1574575056046903875_n.jpg" alt="output" width="400" height="350">
+      <img src="assets/462554405_1754875351968851_1574575056046903875_n.jpg" alt="output" width="400" height="350">
 
 ## 📋License
 This project is licensed under the MIT License.
