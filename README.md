@@ -1,5 +1,5 @@
 
-# <img src="assets/462568131_2039142093181882_1441174839537607123_n.png" alt="SMS Icon" width="100" height="50"> SMS Messaging Application
+# <img src="assets/462568131_2039142093181882_1441174839537607123_n.png" alt="SMS Icon" width="70" height="35"> SMS Messaging Application
 
 This Django application offers a simple yet powerful solution for sending SMS messages through integration with a third-party SMS gateway service. It is designed to be user-friendly, flexible, and easy to integrate into any existing Django project or web application. With this application, developers can quickly add SMS functionality to their projects, allowing for a seamless user experience. 🚀
 
