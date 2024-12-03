@@ -10,7 +10,7 @@ class Message(models.Model):
     
     def send_sms(self):
         account_sid = 'AC4e346e0ca8490da69d91efa73a856ddd'
-        auth_token = 'b8b9d4dbd06a6131ebcc1d9f441deb75'
+        auth_token = '2ac7a6321b9ac774372e4511c28cc359'
         client = Client(account_sid, auth_token)
 
         if self.score >= 70:
