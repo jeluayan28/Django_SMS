@@ -10,8 +10,8 @@ This Django application provides functionality to send SMS messages using a thir
 
 ## Requirements
 - Python 3
-- Django 4 or higher
-- A third-party SMS gateway account (e.g., Twilio, Nexmo, or other providers).
+- Django 5 or higher
+- A third-party SMS gateway account (e.g., Twilio, or other providers).
 
 ## Installation
 
@@ -20,19 +20,22 @@ This Django application provides functionality to send SMS messages using a thir
    git clone https://github.com/jeluayan28/Django_SMS.git
    cd Django_SMS
    ```
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-2. Set up the database:
+3. Set up the database:
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
-3. Create super user account:
-
+4. Create super user account:
    ```bash
    python manage.py createsuperuser
    ```
 
-4. Configure the SMS gateway credentials:
+5. Configure the SMS gateway credentials:
    - Open the `models.py` file in `dashboard` folder and add the necessary SMS gateway credentials:
      ```python
      account_sid = 'your_api_key_here'
@@ -41,7 +44,7 @@ This Django application provides functionality to send SMS messages using a thir
      to = 'your_receiver_number_here'
      ```
 
-5. Run the server:
+6. Run the server:
    ```bash
    python manage.py runserver
    ```
@@ -50,7 +53,7 @@ This Django application provides functionality to send SMS messages using a thir
 
 1. Access the application in your web browser at `http://127.0.0.1:8000/`.
 
-2. Use the SMS form to input the recipient's phone number and the message you want to send.
+2. Use the SMS form to input the recipient's name and the Score to validate.
 
 3. Click "Send" to deliver the SMS.
 
