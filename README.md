@@ -9,29 +9,25 @@ This Django application provides functionality to send SMS messages using a thir
 - Basic form interface for testing SMS functionality.
 
 ## Requirements
-- Python 3.x
-- Django 4.x or higher
+- Python 3
+- Django 4 or higher
 - A third-party SMS gateway account (e.g., Twilio, Nexmo, or other providers).
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
+   git clone https://github.com/jeluayan28/Django_SMS.git
+   cd Django_SMS
    ```
 
-2. Install the required Python packages:
+2. Set up the database:
    ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Set up the database:
-   ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
-4. Configure the SMS gateway credentials:
+3. Configure the SMS gateway credentials:
    - Open the `settings.py` file and add the necessary SMS gateway credentials:
      ```python
      SMS_GATEWAY_API_KEY = 'your_api_key_here'
