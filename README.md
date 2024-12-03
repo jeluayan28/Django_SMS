@@ -26,16 +26,22 @@ This Django application provides functionality to send SMS messages using a thir
    python manage.py makemigrations
    python manage.py migrate
    ```
+3. Create super user account:
 
-3. Configure the SMS gateway credentials:
-   - Open the `settings.py` file and add the necessary SMS gateway credentials:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+4. Configure the SMS gateway credentials:
+   - Open the `models.py` file in `dashboard` folder and add the necessary SMS gateway credentials:
      ```python
-     SMS_GATEWAY_API_KEY = 'your_api_key_here'
-     SMS_GATEWAY_API_SECRET = 'your_api_secret_here'
-     SMS_GATEWAY_SENDER_ID = 'your_sender_id_here'
+     account_sid = 'your_api_key_here'
+     auth_token = 'your_api_secret_here'
+     from_ = 'your_trial_number_here'
+     to = 'your_receiver_number_here'
      ```
 
-5. Start the development server:
+5. Run the server:
    ```bash
    python manage.py runserver
    ```
@@ -47,16 +53,6 @@ This Django application provides functionality to send SMS messages using a thir
 2. Use the SMS form to input the recipient's phone number and the message you want to send.
 
 3. Click "Send" to deliver the SMS.
-
-## File Structure
-- `sms/`: Contains the core SMS application logic.
-  - `views.py`: Defines the views for sending SMS.
-  - `forms.py`: Manages the input form for SMS details.
-  - `models.py`: Stores SMS-related data (if needed).
-- `templates/sms/`: Contains HTML templates for the SMS form interface.
-
-## Contributing
-Feel free to submit issues or contribute via pull requests. Please ensure your code follows Django's coding standards.
 
 ## License
 This project is licensed under the MIT License.
