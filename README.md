@@ -13,7 +13,7 @@ This Django application offers a simple yet powerful solution for sending SMS me
 - 🌐Django 5 or higher
 - 📡 A third-party SMS gateway account (e.g., Twilio, or other providers).
 
-## Installation
+## 📚 Installation
 
 1. Clone the repository:
    ```bash
